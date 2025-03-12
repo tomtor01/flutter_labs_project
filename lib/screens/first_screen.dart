@@ -49,10 +49,9 @@ class FirstScreen extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16.0),
         child: FilledButton(
-          onPressed: () {
-            // Action here
-          },
+          onPressed: () {},
           style: FilledButton.styleFrom(
+            backgroundColor: Colors.black,
             minimumSize: const Size(double.infinity, 50),
           ),
           child: const Text("Explore"),
@@ -82,7 +81,6 @@ class _TournamentCard extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               ClipRRect(
-                // Zaokrąglone rogi zdjęcia
                 borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
                 child: Image.asset(
                   'assets/sample-picture.webp',
@@ -244,7 +242,7 @@ class _ProgressCard extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
-                    'assets/sample-picture.webp', // Replace with actual asset path
+                    'assets/sample-picture.webp',
                     width: 80,
                     height: 80,
                     fit: BoxFit.cover,
@@ -260,22 +258,25 @@ class _ProgressCard extends StatelessWidget {
                         children: [
                           Text('Mastering Skills',
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold)),
+                                  fontSize: 16, fontWeight: FontWeight.bold)
+                          ),
                           Icon(Icons.bookmark_border),
                         ],
                       ),
                       SizedBox(height: 4),
                       Text('Player Profile',
-                          style: TextStyle(color: Colors.grey[600])),
+                          style: TextStyle(color: Colors.grey[600])
+                      ),
                       SizedBox(height: 8),
                       LinearProgressIndicator(
-                        value: 0.6, // Example progress value
+                        value: 0.6,
                         backgroundColor: Colors.grey[300],
                         color: Colors.blue,
                       ),
                       SizedBox(height: 4),
                       Text('Progress Update',
-                          style: TextStyle(fontSize: 12, color: Colors.grey)),
+                          style: TextStyle(fontSize: 12, color: Colors.grey)
+                      ),
                     ],
                   ),
                 )
